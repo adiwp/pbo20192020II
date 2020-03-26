@@ -1,0 +1,19 @@
+{
+    "version":"1.0.0",
+    "tasks":[
+        {
+            "label" : "run java main",
+            "type" : "shell",
+            "command" : "java",
+            "args":[
+                "-cp",
+                "./bin",
+                "com.Tutorial.Main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

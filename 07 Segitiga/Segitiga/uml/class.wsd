@@ -1,0 +1,11 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Segitiga {
+    -alas:int
+    -tinggi:int
+    +setAlas(alas)
+    +setTinggi(tinggi)
+    +getAlas():int
+    +getTinggi():int
+}
+@enduml

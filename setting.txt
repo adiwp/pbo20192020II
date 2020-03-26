@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontSize": 12,
+    	"editor.fontFamily": "Fira Code",
+    	"editor.lineHeight": 24,
+    	"window.zoomLevel": 0.9,
+    	"terminal.integrated.fontSize": 12,
+    	"terminal.integrated.lineHeight": 1.5,
+    	"workbench.colorTheme": "Dracula Soft",
+    	"workbench.iconTheme": "material-icon-theme",
+	}
+}

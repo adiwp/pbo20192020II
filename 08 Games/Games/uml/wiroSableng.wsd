@@ -1,0 +1,12 @@
+@startuml wiroSableng
+object wiroSableng
+wiroSableng : name = "Wiro Sableng"
+object kenconoGeni
+kenconoGeni : name = "Kencono Geni"
+kenconoGeni : kesehatan = 200
+object nagaGeni
+nagaGeni : name = "Naga Geni"
+nagaGeni : kekuatan = 100
+wiroSableng -- kenconoGeni
+wiroSableng -- nagaGeni
+@enduml

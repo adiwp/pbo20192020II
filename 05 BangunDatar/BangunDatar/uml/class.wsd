@@ -1,0 +1,32 @@
+@startuml BangunDatar
+skinparam classAttributeIconSize 0
+
+BangunDatar <|-- Persegi
+BangunDatar <|-- Segitiga
+BangunDatar <|-- Lingkaran
+class BangunDatar {
+    +luas()
+    +keliling()
+}
+
+class Persegi {
+    -sisi: int
+    +Persegi(sisi: int)
+    +luas()
+    +keliling()
+}
+
+class Segitiga {
+    -alas: int
+    -tinggi: int
+    +Segitiga(alas: int, tinggi: int)
+    +luas()
+}
+
+class Lingkaran {
+    -r: int
+    +Lingkaran(r: int)
+    +luas()
+    +keliling()
+}
+@enduml

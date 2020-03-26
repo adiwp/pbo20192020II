@@ -1,0 +1,39 @@
+@startuml classJagoanJubahSenjata
+skinparam classAttributeIconSize 0
+Jagoan -- Jubah
+Jagoan -- Senjata
+
+class Jagoan {
+    -nama: String
+    -kesehatanDasar: int
+    -kekuatanDasar: int
+    -jubah: Jubah
+    -senjata: Senjata
+    -derajat: int
+    -kenaikanKekuatan: int
+    -kenaikanKesehatan: int
+    +Player(name:String)
+    +naikDerajat()
+    +setJubah(jubah:Jubah)
+    +setSenjata(senjata:Senjata)
+    +sehatMaksimal(): int
+    +getKekuatanMaksimal(): int
+    +info()
+}
+
+class Jubah {
+    -nama: String
+    -kesehatan: int
+    +Jubah(nama:String,kekuatan:int,kesehatan:int)
+    +getNama():String
+    +getTambahKesehatan(): int
+}
+
+class Senjata {
+    -nama: String
+    -kekuatan: int
+    +Senjata(nama:String,kekuatan:int)
+    +getNama(): String
+    +getKekuatanSerang(): int
+}
+@enduml

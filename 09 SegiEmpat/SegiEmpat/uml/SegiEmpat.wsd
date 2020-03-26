@@ -1,0 +1,11 @@
+@startuml SegiEmpat
+skinparam classAttributeIconSize 0
+
+class SegiEmpat {
+    +luas(panjang: int, lebar: int): int
+    +luas(sisi: int): int
+    +keliling(panjang: int, lebar: int): int
+    +keliling(sisi: int): int
+}
+
+@enduml

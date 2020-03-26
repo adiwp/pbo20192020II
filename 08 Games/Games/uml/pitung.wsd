@@ -1,0 +1,12 @@
+@startuml pitung
+object pitung
+pitung : name = "Pitung"
+object bajuKoko
+bajuKoko : name = "Baju Koko"
+bajuKoko : kesehatan = 5
+object golok
+golok : name = "Golok"
+golok : kekuatan = 50
+pitung -- bajuKoko
+pitung -- golok
+@enduml

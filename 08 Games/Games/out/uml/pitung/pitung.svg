@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="171px" preserveAspectRatio="none" style="width:245px;height:171px;" version="1.1" viewBox="0 0 245 171" width="245px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tnbe7obh3f8x" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1tnbe7obh3f8x)" height="39.6719" style="stroke: #A80036; stroke-width: 1.5;" width="90" x="80.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="108.5" y="22.457">pitung</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="81.5" x2="169.5" y1="27.0938" y2="27.0938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="78" x="86.5" y="41.4746">name = "Pitung"</text><rect fill="#FEFECE" filter="url(#f1tnbe7obh3f8x)" height="52.25" style="stroke: #A80036; stroke-width: 1.5;" width="107" x="6" y="108"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="33.5" y="122.457">bajuKoko</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="112" y1="127.0938" y2="127.0938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="95" x="12" y="141.4746">name = "Baju Koko"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="65" x="12" y="154.0527">kesehatan = 5</text><rect fill="#FEFECE" filter="url(#f1tnbe7obh3f8x)" height="52.25" style="stroke: #A80036; stroke-width: 1.5;" width="86" x="148.5" y="108"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="176.5" y="122.457">golok</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="149.5" x2="233.5" y1="127.0938" y2="127.0938"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="74" x="154.5" y="141.4746">name = "Golok"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="65" x="154.5" y="154.0527">kekuatan = 50</text><!--link pitung to bajuKoko--><path d="M113.395,48.075 C102.7513,64.8464 87.182,89.3798 75.511,107.7706 " fill="none" id="pitung-bajuKoko" style="stroke: #A80036; stroke-width: 1.0;"/><!--link pitung to golok--><path d="M137.605,48.075 C148.249,64.8464 163.818,89.3798 175.489,107.7706 " fill="none" id="pitung-golok" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml pitung
+object pitung
+pitung : name = "Pitung"
+object bajuKoko
+bajuKoko : name = "Baju Koko"
+bajuKoko : kesehatan = 5
+object golok
+golok : name = "Golok"
+golok : kekuatan = 50
+pitung - - bajuKoko
+pitung - - golok
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 23:19:51 ICT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 11.0.6+8-LTS
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

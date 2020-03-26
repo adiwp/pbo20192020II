@@ -1,0 +1,12 @@
+@startuml jakaSembung
+object jakaSembung
+jakaSembung : name = "Jaka Sembung"
+object bajuUlar
+bajuUlar : name = "Baju Ular"
+bajuUlar : kesehatan = 100;
+object kapak
+kapak : name = "Kapak"
+kapak : kekuatan = 75
+jakaSembung -- bajuUlar
+jakaSembung -- kapak
+@enduml
