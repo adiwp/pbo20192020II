@@ -10,7 +10,7 @@ class Lampu {
     }
 
     void on() {
-        System.err.println(this.namaLampu + " dinyalakan");
+        System.out.println(this.namaLampu + " dinyalakan");
         this.menyala = true;
     }
 
