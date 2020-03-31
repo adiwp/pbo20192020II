@@ -2,30 +2,30 @@ package app;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // // implementasi single inheritance
-        // Mobil m1 = new Mobil("Hino");
-        // Sedan vios = new Sedan("Vios");
+        // implementasi single inheritance
+        Mobil m1 = new Mobil("Hino");
+        Sedan vios = new Sedan("Vios");
 
-        // m1.klakson();
-        // vios.klakson();
+        m1.klakson();
+        vios.klakson();
 
-        // // implementasi multilevel inheritance
-        // Binatang kambing = new Binatang("kambing");
-        // Kucing mudreg = new Kucing("mudreg");
-        // Cemeng mocha = new Cemeng("mocha");
+        // implementasi multilevel inheritance
+        Binatang kambing = new Binatang("kambing");
+        Kucing mudreg = new Kucing("mudreg");
+        Cemeng mocha = new Cemeng("mocha");
 
-        // kambing.bersuara();
-        // mudreg.bersuara();
-        // mocha.bersuara();
+        kambing.bersuara();
+        mudreg.bersuara();
+        mocha.bersuara();
 
-        // // implementasi hierarchichal inheritance
-        // Karyawan wahyu = new Karyawan("Wahyu");
-        // Dosen amir = new Dosen("Amir Murtako");
-        // Staff melan = new Staff("Melan");
+        // implementasi hierarchichal inheritance
+        Karyawan wahyu = new Karyawan("Wahyu");
+        Dosen amir = new Dosen("Amir Murtako");
+        Staff melan = new Staff("Melan");
 
-        // wahyu.kerja();
-        // amir.kerja();
-        // melan.kerja();
+        wahyu.kerja();
+        amir.kerja();
+        melan.kerja();
 
         // implementasi method overloading
         MobilSport jaguar = new MobilSport("Jaguar");
