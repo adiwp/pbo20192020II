@@ -1,0 +1,9 @@
+@startuml MobilSport
+skinparam classAttributeIconSize 0
+Class MobilSport {
+    -String nama
+    +Mobil(String nama)
+    +gigi(int g)
+    +gigi(int g, int t)
+}
+@enduml

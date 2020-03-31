@@ -1,0 +1,19 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+Karyawan <|-- Dosen
+Karyawan <|-- Staff
+Class Karyawan {
+    #String nama
+    +Karyawan(String nama)
+    +kerja()
+}
+class Dosen {
+    +Dosen(String nama)
+    +kerja()
+}
+class Staff {
+    +Staff(String nama)
+    +kerja()
+}
+note "Hierarchical" as n
+@enduml

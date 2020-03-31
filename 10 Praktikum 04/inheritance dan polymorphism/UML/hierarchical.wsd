@@ -1,0 +1,6 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+ClassF <|-- ClassG
+ClassF <|-- ClassH
+note "Hierarchical" as n
+@enduml

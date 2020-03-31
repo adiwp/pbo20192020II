@@ -1,0 +1,6 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+ClassC <|-- ClassD
+ClassD <|-- ClassE
+note "Multilevel" as n
+@enduml

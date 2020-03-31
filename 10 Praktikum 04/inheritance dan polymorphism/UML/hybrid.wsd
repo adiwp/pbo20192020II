@@ -1,0 +1,8 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+ClassL <|-- ClassM
+ClassL <|-- ClassN
+ClassM <|-- ClassO
+ClassN <|-- ClassO
+note "Hybrid" as n
+@enduml

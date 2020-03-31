@@ -1,0 +1,5 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+ClassA <|-- ClassB
+note "Single" as n
+@enduml

@@ -1,0 +1,14 @@
+@startuml mobil
+skinparam classAttributeIconSize 0
+Mobil <|-- Sedan
+note "Single" as n
+class Mobil {
+    #String nama
+    +Mobil(String nama)
+    +klakson()
+}
+class Sedan {
+    +Sedan(String nama)
+    +klakson()
+}
+@enduml

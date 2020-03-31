@@ -1,0 +1,6 @@
+@startuml inheritance
+skinparam classAttributeIconSize 0
+ClassI <|-- ClassK
+ClassJ <|-- ClassK
+note "Multiple" as n
+@enduml

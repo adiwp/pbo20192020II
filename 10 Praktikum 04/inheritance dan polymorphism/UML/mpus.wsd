@@ -1,0 +1,17 @@
+@startuml kucing
+skinparam classAttributeIconSize 0
+Binatang <|-- Kucing
+Kucing <|-- Cemeng
+class Binatang {
+    -String name
+    Binatang(String nama)
+    +bersuara()
+}
+class Kucing {
+    Kucing(String nama)
+}
+class Cemeng {
+    Cemeng(String nama)
+}
+note "Multilevel" as n
+@enduml
