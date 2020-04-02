@@ -1,0 +1,3 @@
+@startuml agregasi
+Mobil "1" o-- "4" Ban
+@enduml

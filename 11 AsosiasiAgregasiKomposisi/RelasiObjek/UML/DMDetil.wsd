@@ -1,0 +1,20 @@
+@startuml DosenMahasiswa
+Dosen "1" -- "many" Mahasiswa
+class Dosen {
+    -String nidn
+    -String nama
+    -String[] npmMahasiswa
+    +Dosen(String nidn, String nama)
+    +setNpmMahasiswa(String[] npmMahasiswa)
+    +getNIDN(): String
+    +getNama(): String
+    +getNpmMahasiswa()
+}
+class Mahasiswa {
+    -String npm
+    -String nama
+    +Mahasiswa(String npm, String nama)
+    +getNPM(): String
+    +getNama(): String
+}
+@enduml

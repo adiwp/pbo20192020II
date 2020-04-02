@@ -1,0 +1,28 @@
+@startuml jurusanmahasiswa
+Jurusan "1" o-- "*" Mahasiswa
+Dosen "1" -- "many" Mahasiswa
+class Jurusan {
+    -String kodeJurusan
+    -String namaJurusan
+    -Mahasiswa[] mahasiswa
+    +Jurusan(String kodeJurusan, String namaJurusan)
+    +setMahasiswa(Mahasiswa[] mahasiswa)
+    +displayInformasi()
+}
+class Dosen {
+    -String nidn
+    -String nama
+    -String[] npmMahasiswa
+    +Dosen(String nidn, String nama)
+    +setNpmMahasiswa(String[] npmMahasiswa)
+    +getNPM(): String
+    +getNama(): String
+}
+class Mahasiswa {
+    -String npm
+    -String nama
+    +Mahasiswa(String npm, String nama)
+    +getNPM(): String
+    +getNama(): String
+}
+@enduml

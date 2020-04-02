@@ -1,0 +1,3 @@
+@startuml DosenMahasiswa
+Dosen "1" -- "many" Mahasiswa
+@enduml

@@ -1,0 +1,15 @@
+@startuml komposisi
+Mobil *-- Mesin
+class Mesin {
+    -TipeMEsin: tipeMesin
+    +Mesin(TipeMesin tipeMesin)
+    +getTipeMesin(): TipeMesin
+}
+class Mobil {
+    -String: nama
+    -Mesin: mesin
+    +Mobil(String nama, Mesin mesin)
+    +displayInformasi()
+
+}
+@enduml
