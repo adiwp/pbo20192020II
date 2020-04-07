@@ -1,0 +1,22 @@
+@startuml abstract
+Database <|-- MySQL
+Database <|-- PostgreSQL
+
+abstract class Database {
+    {abstract} String getDatabaseApp()
+    {abstract} String getDatabaseName()
+    {abstract} String getTableName()
+}
+
+class MySQL {
+    +void getDatabaseApp()
+    +void getDatabaseName()
+    +void getTableName()
+}
+
+class PostgreSQL {
+    +void getDatabaseApp()
+    +void getDatabaseName()
+    +void getTableName()
+}
+@enduml

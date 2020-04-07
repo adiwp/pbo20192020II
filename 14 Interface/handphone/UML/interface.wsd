@@ -1,0 +1,49 @@
+@startuml interface
+PenggunaHP --> Handphone
+Handphone <|-- Xiaomi
+Handphone <|-- Vivo
+Handphone <|-- Samsung
+
+class PenggunaHP {
+    -handphone: Handphone
+    +nyalakanHP()
+    +matikanHP()
+    +besarkanSuaraHP()
+    +kecilkanSuaraHP()
+}
+interface Handphone {
+    MAX: int
+    MIN: int
+    +nyalakan()
+    +matikan()
+    +besarkanSuara()
+    +kecilkanSuara()
+}
+class Xiaomi {
+    -volume: int
+    -menyala: Boolean
+    +nyalakan()
+    +matikan()
+    +besarkanSuara()
+    +kecilkanSuara()
+    +getVolume()
+}
+class Vivo {
+    -volume: int
+    -menyala: Boolean
+    +nyalakan()
+    +matikan()
+    +besarkanSuara()
+    +kecilkanSuara()
+    +getVolume()
+}
+class Samsung {
+    -volume: int
+    -menyala: Boolean
+    +nyalakan()
+    +matikan()
+    +besarkanSuara()
+    +kecilkanSuara()
+    +getVolume()
+}
+@enduml

@@ -1,0 +1,22 @@
+@startuml abstract
+BangunDatar <|-- Segitiga
+BangunDatar <|-- Lingkaran
+
+abstract class BangunDatar {
+    +warna: String
+    {abstract} void Luas()
+}
+
+class Segitiga {
+    -alas: int
+    -tinggi: int
+    +Segitiga(int alas, int tinggi, String warna)
+    +void luas()
+}
+
+class Lingkaran {
+    -jari2: int
+    +Lingkaran(int jari2, String warna)
+    +void luas()
+}
+@enduml
