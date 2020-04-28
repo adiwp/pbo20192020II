@@ -6,14 +6,14 @@ public class Samsung implements Handphone {
 
     public Samsung() {
         // set volume awal
-        this.volume = 50;
+        this.volume = 70;
     }
 
     @Override
     public void nyalakan() {
         menyala = true;
         System.out.println("Handphone menyala...");
-        System.out.println("Selamat datang di XIAOMI");
+        System.out.println("Selamat datang di SAMSUNG");
         System.out.println("Android version 10");
     }
 

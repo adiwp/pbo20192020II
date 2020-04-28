@@ -6,7 +6,7 @@ public class Vivo implements Handphone {
 
     public Vivo() {
         // set volume awal
-        this.volume = 50;
+        this.volume = 60;
     }
 
     @Override

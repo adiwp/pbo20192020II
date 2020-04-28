@@ -1,7 +1,6 @@
 package app;
 
 public class Xiaomi implements Handphone {
-
     private int volume;
     private boolean menyala;
 

@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         // membuat objek HP
-        Handphone redmiNote8 = new Xiaomi();
+        Handphone Pipo = new Vivo();
 
         // membuat objek user
-        PenggunaHP dian = new PenggunaHP(redmiNote8);
+        PenggunaHP dian = new PenggunaHP(Pipo);
 
         // kita coba nyalakan HP-nya
         dian.nyalakanHP();
