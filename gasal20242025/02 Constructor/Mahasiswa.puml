@@ -1,0 +1,23 @@
+@startuml
+class Mahasiswa {
+    - String nama
+    - String nim
+    - int umur
+    + Mahasiswa()
+    + Mahasiswa(String nama, String nim)
+    + Mahasiswa(String nama, String nim, int umur)
+    + String getNama()
+    + void setNama(String nama)
+    + String getNim()
+    + void setNim(String nim)
+    + int getUmur()
+    + void setUmur(int umur)
+    + void tampilkanInfo()
+}
+
+class Main {
+    + static void main(String[] args)
+}
+
+Main --> Mahasiswa
+@enduml
