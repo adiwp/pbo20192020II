@@ -1,0 +1,34 @@
+@startuml
+class Mahasiswa {
+    - String nama
+    - String nim
+    - int umur
+    + Mahasiswa()
+    + Mahasiswa(String nama, String nim)
+    + Mahasiswa(String nama, String nim, int umur)
+    + String getNama()
+    + void setNama(String nama)
+    + String getNim()
+    + void setNim(String nim)
+    + int getUmur()
+    + void setUmur(int umur)
+    + void tampilkanInfo()
+}
+
+class MahasiswaInternational {
+    - String negaraAsal
+    + MahasiswaInternational()
+    + MahasiswaInternational(String nama, String nim, String negaraAsal)
+    + MahasiswaInternational(String nama, String nim, int umur, String negaraAsal)
+    + String getNegaraAsal()
+    + void setNegaraAsal(String negaraAsal)
+    + void tampilkanInfo()
+}
+
+class Main {
+    + static void main(String[] args)
+}
+
+MahasiswaInternational --|> Mahasiswa
+Main --> MahasiswaInternational
+@enduml
