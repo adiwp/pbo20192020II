@@ -18,6 +18,7 @@ public class App {
         // instantiate / membuat objek segitiga
         Segitiga sg = new Segitiga(10, 8);
         System.out.println("Luas Segitiga: " + sg.luas());
+        
         // karena class Segitiga tidak mendefinisikan keliling
         // maka ketika sg memanggil keliling(), yang terpanggil
         // adalah keliling() yang ada di parent/super class yaitu
