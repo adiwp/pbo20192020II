@@ -1,0 +1,29 @@
+@startuml
+class Handphone {
+    - String merk
+    - String model
+    + Handphone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void telepon(String nomor)
+}
+
+class Smartphone {
+    + Smartphone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void telepon(String nomor)
+    + void aksesInternet()
+}
+
+class FeaturePhone {
+    + FeaturePhone(String merk, String model)
+    + void nyalakan()
+    + void matikan()
+    + void telepon(String nomor)
+    + void mainGameSnake()
+}
+
+Handphone <|-- Smartphone
+Handphone <|-- FeaturePhone
+@enduml
