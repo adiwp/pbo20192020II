@@ -1,0 +1,15 @@
+@startuml
+class Dokter {
+    - nama : String
+    + Dokter(nama : String)
+    + merawat(pasien : Pasien) : void
+}
+
+class Pasien {
+    - nama : String
+    + Pasien(nama : String)
+    + getNama() : String
+}
+
+Dokter --> Pasien : merawat
+@enduml

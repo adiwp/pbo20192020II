@@ -1,0 +1,17 @@
+@startuml
+class Bab {
+    - judulBab : String
+    + Bab(judulBab : String)
+    + getJudulBab() : String
+}
+
+class Buku {
+    - judulBuku : String
+    - daftarBab : List<Bab>
+    + Buku(judulBuku : String)
+    + tambahBab() : void
+    + tampilkanBab() : void
+}
+
+Buku *-- Bab
+@enduml

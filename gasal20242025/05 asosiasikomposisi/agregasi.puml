@@ -1,0 +1,16 @@
+@startuml
+class Pemain {
+    - nama : String
+    + Pemain(nama : String)
+    + getNama() : String
+}
+
+class Tim {
+    - namaTim : String
+    - daftarPemain : List<Pemain>
+    + Tim(namaTim : String, daftarPemain : List<Pemain>)
+    + tampilkanPemain() : void
+}
+
+Tim o-- Pemain
+@enduml
