@@ -1,0 +1,31 @@
+@startuml
+interface Movable {
+  +void move()
+}
+
+interface Fuelable {
+  +void refuel()
+}
+
+abstract class Vehicle {
+  -name : String
+  +Vehicle(name: String)
+  +void showInfo()
+}
+
+class Car extends Vehicle implements Movable, Fuelable {
+  +Car(name: String)
+  +void move()
+}
+
+class Boat extends Vehicle implements Movable, Fuelable {
+  +Boat(name: String)
+  +void move()
+  +void refuel()
+}
+
+class Building extends Vehicle {
+  +Building(name: String)
+}
+
+@enduml
