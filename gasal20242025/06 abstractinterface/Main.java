@@ -3,6 +3,7 @@ public class Main {
         // Membuat objek Car dan Boat
         Car myCar = new Car("Mobil Sport");
         Boat myBoat = new Boat("Perahu Motor");
+        Motor myMotor = new Motor("Motor Gravel");
         Building myBuilding = new Building("Gedung Tinggi");
 
         // Menampilkan informasi dan menggerakkan kendaraan
@@ -15,6 +16,12 @@ public class Main {
         myBoat.showInfo();
         myBoat.move();
         myBoat.refuel();
+
+        System.out.println();  // Pembatas antar output
+
+        myMotor.showInfo();
+        myMotor.move();
+        myMotor.refuel();
 
         System.out.println();  // Pembatas antar output
 

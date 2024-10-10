@@ -5,10 +5,12 @@ class Car extends Vehicle implements Movable, Fuelable {
     }
 
     // Implementasi method abstract dari Vehicle
-    @Override
     public void move() {
         System.out.println(name + " bergerak di jalan.");
     }
 
     // Menggunakan default method refuel dari Fuelable tanpa override
+    public void refuel() {
+        System.out.println(name + "Isi bahan bakar mobil");
+    }
 }

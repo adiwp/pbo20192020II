@@ -5,13 +5,11 @@ class Boat extends Vehicle implements Movable, Fuelable {
     }
 
     // Implementasi method abstract dari Vehicle
-    @Override
     public void move() {
         System.out.println(name + " bergerak di air.");
     }
 
     // Override default method refuel dari Fuelable
-    @Override
     public void refuel() {
         System.out.println(name + " mengisi bahan bakar solar khusus kapal.");
     }
