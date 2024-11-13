@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package com.atm.model {
+    class Account {
+        - accountNumber : String
+        - pin : String
+        - balance : double
+        + Account(accountNumber : String, pin : String, balance : double)
+        + getAccountNumber() : String
+        + verifyPin(inputPin : String) : boolean
+        + getBalance() : double
+        + credit(amount : double) : void
+        + debit(amount : double) : void
+    }
+}
+
+package com.atm.transaction {
+    abstract class Transaction {
+        # account : Account
+        + Transaction(account : Account)
+        {abstract} + execute() : void
+    }
+
+    class Withdrawal extends Transaction {
+        + Withdrawal(account : Account)
+        + execute() : void
+    }
+
+    class Deposit extends Transaction {
+        + Deposit(account : Account)
+        + execute() : void
+    }
+
+    class Transfer extends Transaction {
+        - targetAccount : Account
+        + Transfer(account : Account, targetAccount : Account)
+        + execute() : void
+    }
+
+    Transaction <|-- Withdrawal
+    Transaction <|-- Deposit
+    Transaction <|-- Transfer
+}
+
+package com.atm {
+    class ATM {
+        - accounts : Map<String, Account>
+        + ATM()
+        - initializeAccounts() : void
+        + start() : void
+        - authenticateUser(accountNumber : String, pin : String) : Account
+        - showMenu(account : Account) : void
+    }
+
+    class Main {
+        + main(args : String[]) : void
+    }
+
+    Main ..> ATM : uses
+    ATM ..> Account : manages
+    ATM ..> Transaction : creates
+    Transaction --> Account : operates on
+    Transfer --> Account : operates on targetAccount
+}
+@enduml

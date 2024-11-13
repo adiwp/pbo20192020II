@@ -1,0 +1,31 @@
+@startuml
+actor Nasabah
+participant "ATM" as ATM
+participant "Account" as Account
+participant "Withdrawal" as Withdrawal
+
+Nasabah -> ATM : start()
+ATM -> Nasabah : "Masukkan kartu dan PIN"
+Nasabah -> ATM : accountNumber, pin
+ATM -> ATM : authenticateUser(accountNumber, pin)
+ATM -> Account : verifyPin(pin)
+Account --> ATM : true/false
+alt Autentikasi berhasil
+    ATM -> Nasabah : "Menu Transaksi"
+    Nasabah -> ATM : Pilih "Penarikan Tunai"
+    ATM -> Withdrawal : new Withdrawal(account)
+    ATM -> Withdrawal : execute()
+    Withdrawal -> Nasabah : "Masukkan jumlah penarikan"
+    Nasabah -> Withdrawal : amount
+    Withdrawal -> Account : getBalance()
+    alt Saldo cukup
+        Withdrawal -> Account : debit(amount)
+        Account --> Withdrawal : (balance updated)
+        Withdrawal -> Nasabah : "Transaksi berhasil"
+    else Saldo tidak cukup
+        Withdrawal -> Nasabah : "Saldo tidak mencukupi"
+    end
+else Autentikasi gagal
+    ATM -> Nasabah : "PIN salah"
+end
+@enduml

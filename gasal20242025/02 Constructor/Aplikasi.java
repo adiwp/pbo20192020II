@@ -1,5 +1,5 @@
 // Kelas Main untuk menjalankan program
-public class Main {
+public class Aplikasi {
     public static void main(String[] args) {
         // // Menggunakan constructor tanpa parameter
         // Mahasiswa mhs1 = new Mahasiswa();

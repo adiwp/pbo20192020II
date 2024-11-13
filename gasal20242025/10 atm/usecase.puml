@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Nasabah as Customer
+rectangle ATM_System {
+    usecase "Autentikasi Pengguna" as UC_Authenticate
+    usecase "Penarikan Tunai" as UC_Withdraw
+    usecase "Setoran Tunai" as UC_Deposit
+    usecase "Transfer Dana" as UC_Transfer
+    usecase "Cek Saldo" as UC_CheckBalance
+    usecase "Ubah PIN" as UC_ChangePIN
+}
+
+Customer --> UC_Authenticate
+Customer --> UC_Withdraw
+Customer --> UC_Deposit
+Customer --> UC_Transfer
+Customer --> UC_CheckBalance
+Customer --> UC_ChangePIN
+
+UC_Withdraw ---> UC_Authenticate : <<include>>
+UC_Deposit ---> UC_Authenticate : <<include>>
+UC_Transfer ---> UC_Authenticate : <<include>>
+UC_CheckBalance ---> UC_Authenticate : <<include>>
+UC_ChangePIN ---> UC_Authenticate : <<include>>
+
+@enduml
