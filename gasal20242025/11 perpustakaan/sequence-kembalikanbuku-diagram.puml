@@ -1,0 +1,26 @@
+@startuml
+actor Member
+participant "LibraryService" as Service
+participant "Member" as MemberObj
+participant "Book" as BookObj
+
+Member -> Service : returnBook(memberId, isbn)
+Service -> Service : findMember(memberId)
+Service -> MemberObj : verifyMembership()
+Service -> Service : findBook(isbn)
+Service -> BookObj : isBorrowed()
+alt Buku dipinjam oleh anggota
+    Service -> MemberObj : returnBook(BookObj)
+    MemberObj -> BookObj : setBorrowed(false)
+    opt Pengembalian terlambat
+        MemberObj -> BookObj : getDueDate()
+        Service -> Service : calculateFine()
+        Service -> MemberObj : addFine(amount)
+        Service -> Member : "Pengembalian berhasil dengan denda"
+    else Pengembalian tepat waktu
+        Service -> Member : "Buku berhasil dikembalikan"
+    end
+else Buku tidak dipinjam
+    Service -> Member : "Pengembalian gagal, buku tidak terdaftar sebagai dipinjam"
+end
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Anggota" as Member
+actor "Petugas Perpustakaan" as Librarian
+
+rectangle "Sistem Manajemen Perpustakaan" {
+    usecase "Registrasi Anggota" as UC_RegisterMember
+    usecase "Menambah Buku" as UC_AddBook
+    usecase "Menghapus Buku" as UC_RemoveBook
+    usecase "Meminjam Buku" as UC_BorrowBook
+    usecase "Mengembalikan Buku\n(Denda jika terlambat)" as UC_ReturnBook
+    usecase "Melihat Daftar Buku Tersedia" as UC_ListAvailableBooks
+    usecase "Melihat Daftar Buku Dipinjam" as UC_ListBorrowedBooks
+}
+
+Member --> UC_BorrowBook
+Member --> UC_ReturnBook
+Member --> UC_ListAvailableBooks
+
+Librarian --> UC_RegisterMember
+Librarian --> UC_AddBook
+Librarian --> UC_RemoveBook
+Librarian --> UC_ListAvailableBooks
+Librarian --> UC_ListBorrowedBooks
+
+UC_BorrowBook <--> UC_ListAvailableBooks : <<include>>
+UC_ReturnBook <--> UC_ListBorrowedBooks : <<include>>
+
+@enduml

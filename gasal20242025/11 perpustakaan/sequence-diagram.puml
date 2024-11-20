@@ -1,0 +1,20 @@
+@startuml
+actor Member
+participant "LibraryService" as Service
+participant "Member" as MemberObj
+participant "Book" as BookObj
+
+Member -> Service : borrowBook(memberId, isbn)
+Service -> Service : findMember(memberId)
+Service -> MemberObj : verifyMembership()
+Service -> Service : findBook(isbn)
+Service -> BookObj : isBorrowed()
+alt Buku tersedia
+    Service -> MemberObj : borrowBook(BookObj)
+    MemberObj -> BookObj : setBorrowed(true)
+    MemberObj -> BookObj : setBorrowDate(LocalDate.now())
+    Service -> Member : "Buku berhasil dipinjam"
+else Buku tidak tersedia
+    Service -> Member : "Buku tidak tersedia"
+end
+@enduml

@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package com.library.model {
+    abstract class Person {
+        - name : String
+        - id : String
+        + Person(name : String, id : String)
+        + getName() : String
+        + getId() : String
+    }
+
+    class Member {
+        - borrowedBooks : List<Book>
+        - fine : double
+        + Member(name : String, id : String)
+        + borrowBook(book : Book) : void
+        + returnBook(book : Book) : void
+        + getBorrowedBooks() : List<Book>
+        + getFine() : double
+        + addFine(amount : double) : void
+        + payFine(amount : double) : void
+    }
+
+    class Book {
+        - title : String
+        - author : String
+        - isbn : String
+        - isBorrowed : boolean
+        - borrowDate : LocalDate
+        - dueDate : LocalDate
+        + Book(title : String, author : String, isbn : String)
+        + getTitle() : String
+        + getAuthor() : String
+        + getIsbn() : String
+        + isBorrowed() : boolean
+        + setBorrowed(borrowed : boolean) : void
+        + getBorrowDate() : LocalDate
+        + setBorrowDate(date : LocalDate) : void
+        + getDueDate() : LocalDate
+    }
+
+    Person <|-- Member
+}
+
+package com.library.service {
+    class LibraryService {
+        - books : List<Book>
+        - members : List<Member>
+        + LibraryService()
+        + addBook(book : Book) : void
+        + removeBook(isbn : String) : void
+        + registerMember(member : Member) : void
+        + borrowBook(memberId : String, isbn : String) : void
+        + returnBook(memberId : String, isbn : String) : void
+        + listAvailableBooks() : void
+        + listBorrowedBooks() : void
+        + listMembers() : void
+        + findMember(memberId : String) : Member
+        + findBook(isbn : String) : Book
+    }
+}
+
+com.library.model.Book o-- com.library.service.LibraryService
+com.library.model.Member o-- com.library.service.LibraryService
+@enduml

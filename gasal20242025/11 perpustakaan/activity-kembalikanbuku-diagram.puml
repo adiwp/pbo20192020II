@@ -1,0 +1,23 @@
+@startuml
+start
+:Anggota memilih opsi "Mengembalikan Buku";
+:Menampilkan daftar buku yang dipinjam anggota;
+
+:Anggota memilih buku yang akan dikembalikan;
+if (Buku dipinjam?) then (Ya)
+    if (Pengembalian tepat waktu?) then (Ya)
+        :Menghapus buku dari daftar buku yang dipinjam anggota;
+        :Menandai buku sebagai tersedia;
+        :Menampilkan pesan "Pengembalian berhasil";
+    else (Tidak)
+        :Menghitung denda keterlambatan;
+        :Menambahkan denda ke akun anggota;
+        :Menghapus buku dari daftar buku yang dipinjam anggota;
+        :Menandai buku sebagai tersedia;
+        :Menampilkan pesan "Pengembalian berhasil dengan denda";
+    endif
+else (Tidak)
+    :Menampilkan pesan "Buku tidak ditemukan dalam daftar pinjaman Anda";
+endif
+stop
+@enduml

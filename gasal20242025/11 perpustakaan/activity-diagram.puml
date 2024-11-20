@@ -1,0 +1,16 @@
+@startuml
+start
+:Anggota memilih opsi "Meminjam Buku";
+:Menampilkan daftar buku yang tersedia;
+
+:Anggota memilih buku yang akan dipinjam;
+if (Buku tersedia?) then (Ya)
+    :Menandai buku sebagai dipinjam;
+    :Mengisi tanggal peminjaman dan batas pengembalian;
+    :Menambahkan buku ke daftar buku yang dipinjam anggota;
+    :Menampilkan pesan "Peminjaman berhasil";
+else (Tidak)
+    :Menampilkan pesan "Buku tidak tersedia";
+endif
+stop
+@enduml
